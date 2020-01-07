@@ -1,0 +1,41 @@
+<!--pages/fenlei/fenlei.wxml-->
+<import src="../template/template.wxml" />
+<view class="topic-common-list" style="display:block">
+  <view class="topic-list-item">
+    <image class="cover" mode="aspectFill" src="https://www.watch-life.net/images/life-thinking.jpg">
+    </image>
+    <view class="topic-content-brief">
+      <text>记录观察生活、思考人生的思想火花。</text>
+    </view>
+  </view>
+</view>
+<!-- <template is="articleList"></template> -->
+<view class="container">
+  <view class="post-list">
+    <block wx:for="{{listData}}">
+      <view bindtap="redictDetail" class="post-item" id="{{item.id}}">
+        <image class="post-img" mode="aspectFill" src="{{item.imgUrl}}"></image>
+        <view class="post-desc">
+          <view class="post-title">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="post-data">
+            <image src="../../images/calendar.png"></image>
+            <text> 2019-10-19 </text>
+            <image src="../../images/comments.png"></image>
+            <text>3</text>
+            <image src="../../images/home-like.png"></image>
+            <text>8</text>
+            <image src="../../images/pageviews.png"></image>
+            <text>456</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="loadingmore">
+    <view class="loadingmore">
+      <view class="no-more">- 无更多文章 -</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+<!--pages/template/template.wxml-->
+<template name="articleList">
+  <view class="container">
+    <view class="post-list">
+      <block wx:for="{{listData}}">
+        <view bindtap="redictDetail" class="post-item" id="{{item.id}}">
+          <image class="post-img" mode="aspectFill" src="{{item.imgUrl}}"></image>
+          <view class="post-desc">
+            <view class="post-title">
+              <text>{{item.title}}</text>
+            </view>
+            <view class="post-data">
+              <image src="../../images/calendar.png"></image>
+              <text> 2019-10-19 </text>
+              <image src="../../images/comments.png"></image>
+              <text>3</text>
+              <image src="../../images/home-like.png"></image>
+              <text>8</text>
+              <image src="../../images/pageviews.png"></image>
+              <text>456</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="loadingmore">
+      <view class="loadingmore">
+        <view class="no-more">- 无更多文章 -</view>
+      </view>
+    </view>
+    <view class="copyright" style="display:block">版权所有 </view>
+  </view>
+</template>

@@ -1,0 +1,36 @@
+<!--pages/me/me.wxml-->
+<!-- 用户信息 -->
+<view class="userinfo">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  <view class='userinfo_right'>
+    <text class="userinfo_nickname">{{userInfo.nickName}}</text>
+    <view class='userinfo_des_box'>
+      <view class="btn-update" wx:if="{{openid !=''}}">
+        <button>性别：{{userInfo.gender == 1 ? '男' : userInfo.gender == 2 ? '女': ''}}</button>
+      </view>
+      <view class="btn-exit">城市：{{userInfo.city}}</view>
+    </view>
+  </view>
+</view>
+
+<!-- tab选项卡 -->
+<view class="tab-bar">
+  <block wx:for="{{topBarItems}}" wx:key="id">
+    <view class="tab-item {{item.selected ? 'tab-Selected': '' }}" catchtap="onTapTag" id="{{item.id}}">
+      <text>{{item.name}}</text>
+    </view>
+  </block>
+</view>
+
+<!-- 文章列表 -->
+<view class="list_container">
+  <text>时间轴</text>
+  <block wx:for="{{readLogs}}">
+    <view class="list-item">
+      <text>{{item}}</text>
+    </view>
+  </block>
+  <!-- 没有文章时的提示信息 -->
+  <view class="tips">你还没有相关文章哟~</view>
+  <button bindtap="userLogin" type="primary"  open-type="getUserInfo">{{caozuo}}</button>
+</view>

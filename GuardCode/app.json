@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/tianqi/tianqi",
+    "pages/index/index",
+    "pages/topic/topic",
+    "pages/me/me",
+    "pages/logs/logs",
+    "pages/detail/detail",
+    "pages/fenlei/fenlei",
+    "pages/template/template"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#66CCFF",
+    "navigationBarTitleText": "GuardCode",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#959595",
+    "selectedColor": "#118fff",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/tianqi/tianqi",
+        "iconPath": "images/tab-tianqi.png",
+        "selectedIconPath": "images/tab-tianqi-on.png",
+        "text": "天气"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tab-zixun.png",
+        "selectedIconPath": "images/tab-zixun-on.png",
+        "text": "资讯"
+      },
+      {
+        "pagePath": "pages/topic/topic",
+        "iconPath": "images/tab-topic.png",
+        "selectedIconPath": "images/tab-topic-on.png",
+        "text": "专题"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "images/tab-my.png",
+        "selectedIconPath": "images/tab-my-on.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
